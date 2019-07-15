@@ -52,6 +52,7 @@ func main() {
       // If --username option is missing, then prompt "Enter username: " show in stdout,
       // read string line from stdin, and set line to username variable.
       optEnsure.Do(c)
+      // ...
       return nil
     },
   }
