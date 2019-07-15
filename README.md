@@ -3,7 +3,7 @@
 
 - gopkg.in/urfave/cli.v2
 
-## Usage
+## Install
 
 ```
 go get github.com/shouji-kazuo/cliopts
