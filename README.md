@@ -39,6 +39,7 @@ func main() {
         Usage:   "set password to to login ts3card.com",
       },
     },
+    // ...
     Action: func(c *cli.Context) error {
       // Declate variable that will be passed by --username
       // If --username option is missing, then username variable will be "".
@@ -51,7 +52,9 @@ func main() {
         }))
       // If --username option is missing, then prompt "Enter username: " show in stdout,
       // read string line from stdin, and set line to username variable.
-      optEnsure.Do(c)
+      if err := optEnsure.Do(c); err != nil {
+          return err
+      }
       // ...
       return nil
     },
